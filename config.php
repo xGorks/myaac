@@ -31,17 +31,17 @@ $config = array(
 	 */
 	'env' => 'prod', // 'prod' for production and 'dev' for development
 
-	'template' => 'kathrine', // template used by website (kathrine, tibiacom)
-	'template_allow_change' => true, // allow users to choose their own template while browsing website?
+	'template' => 'tibiacom', // template used by website (kathrine, tibiacom)
+	'template_allow_change' => false, // allow users to choose their own template while browsing website?
 
 	'vocations_amount' => 4, // how much basic vocations your server got (without promotion)
 
 	// what client version are you using on this OT?
 	// used for the Downloads page and some templates aswell
-	'client' => 1098, // 954 = client 9.54
+	'client' => 860, // 954 = client 9.54
 
 	'session_prefix' => 'myaac_', // must be unique for every site on your server
-	'friendly_urls' => false, // mod_rewrite is required for this, it makes links looks more elegant to eye, and also are SEO friendly (example: https://my-aac.org/guilds/Testing instead of https://my-aac.org/?subtopic=guilds&name=Testing). Remember to rename .htaccess.dist to .htaccess
+	'friendly_urls' => true, // mod_rewrite is required for this, it makes links looks more elegant to eye, and also are SEO friendly (example: https://my-aac.org/guilds/Testing instead of https://my-aac.org/?subtopic=guilds&name=Testing). Remember to rename .htaccess.dist to .htaccess
 	'gzip_output' => false, // gzip page content before sending it to the browser, uses less bandwidth but more cpu cycles
 
 	// gesior backward support (templates & pages)
@@ -50,8 +50,8 @@ $config = array(
 	'backward_support' => true,
 
 	// head options (html)
-	'meta_description' => 'Tibia is a free massive multiplayer online role playing game (MMORPG).', // description of the site
-	'meta_keywords' => 'free online game, free multiplayer game, ots, open tibia server', // keywords list separated by commas
+	'meta_description' => 'Koliseu is a free massive multiplayer online role playing game (MMORPG). based on Tibia.', // description of the site
+	'meta_keywords' => 'free online game, free multiplayer game, ots, open tibia server,tibia ot, ot server,koliseu', // keywords list separated by commas
 	'title_separator' => ' - ',
 
 	// footer
@@ -60,7 +60,7 @@ $config = array(
 	'language' => 'en', // default language (currently only 'en' available)
 	'language_allow_change' => false,
 
-	'visitors_counter' => true,
+	'visitors_counter' => false,
 	'visitors_counter_ttl' => 10, // how long visitor will be marked as online (in minutes)
 	'views_counter' => true,
 
@@ -87,15 +87,15 @@ $config = array(
 
 	// images
 	'outfit_images_url' => 'https://outfit-images.ots.me/outfit.php', // set to animoutfit.php for animated outfit
-	'item_images_url' => 'https://item-images.ots.me/1092/', // set to images/items if you host your own items in images folder
+	'item_images_url' => 'images/items', // set to images/items if you host your own items in images folder
 
 	// account
 	'account_management' => true, // disable if you're using other method to manage users (fe. tfs account manager)
-	'account_create_auto_login' => false, // auto login after creating account?
+	'account_create_auto_login' => true, // auto login after creating account?
 	'account_create_character_create' => true, // allow directly to create character on create account page?
 	'account_mail_verify' => false, // force users to confirm their email addresses when registering account
 	'account_mail_unique' => true, // email addresses cannot be duplicated? (one account = one email)
-	'account_premium_days' => 0, // default premium days on new account
+	'account_premium_days' => 15, // default premium days on new account
 	'account_premium_points' => 0, // default premium points on new account
 	'account_welcome_mail' => true, // send welcome email when user registers
 	'account_mail_change' => 2, // how many days user need to change email to account - block hackers
@@ -125,14 +125,14 @@ $config = array(
 	'smtp_debug' => false, // set true to debug (you will see more info in error.log)
 
 	// reCAPTCHA (prevent spam bots)
-	'recaptcha_enabled' => false, // enable recaptcha verification code
-	'recaptcha_site_key' => '', // get your own site and secret keys at https://www.google.com/recaptcha
-	'recaptcha_secret_key' => '',
+	'recaptcha_enabled' => true, // enable recaptcha verification code
+	'recaptcha_site_key' => '6LeVtPEfAAAAAAQlVV_Ts1NXJwGv1VfDYH4WnTaM', // get your own site and secret keys at https://www.google.com/recaptcha
+	'recaptcha_secret_key' => '6LeVtPEfAAAAAKfApMY0VmvlYurJiwY79HCmAgaJ',
 	'recaptcha_theme' => 'light', // light, dark
 
 	//
 	'generate_new_reckey' => true,				// let player generate new recovery key, he will receive e-mail with new rec key (not display on page, hacker can't generate rec key)
-	'generate_new_reckey_price' => 20,			// price for new recovery key
+	'generate_new_reckey_price' => 25,			// price for new recovery key
 	'send_mail_when_change_password' => true,	// send e-mail with new password when change password to account
 	'send_mail_when_generate_reckey' => true,	// send e-mail with rec key (key is displayed on page anyway when generate)
 
@@ -156,7 +156,7 @@ $config = array(
 
 	// town list used when creating character
 	// won't be displayed if there is only one item (rookgaard for example)
-	'character_towns' => array(1),
+	'character_towns' => array(2),
 
 	// characters length
 	// This is the minimum and the maximum length that a player can create a character. It is highly recommend the maximum length to be 21.
@@ -167,24 +167,37 @@ $config = array(
 	// if you use TFS 1.3 with support for 'towns' table in database, then you can ignore this - it will be configured automatically (generated from your .OTBM map)
 	'towns' => array(
 		0 => 'No town',
-		1 => 'Sample town'
+		1 => 'Venore',
+		2 => 'Thais',
+		3 => 'Kazordoon',
+		4 => 'Carlin',
+		5 => 'Ab\'Dendriel',
+		6 => 'Rook',
+		7 => 'Liberty Bay',
+		8 => 'Port Hope',
+		9 => 'Ankrahmun',
+		10 => 'Darashia',
+		11 => 'Edron',
+		12 => 'Svargrond',
+		13 => 'Yalahar',		
+		14 => 'Farmine'
 	),
 
 	// guilds
 	'guild_management' => true, // enable guild management system on the site?
-	'guild_need_level' => 1, // min. level to form a guild
+	'guild_need_level' => 50, // min. level to form a guild
 	'guild_need_premium' => true, // require premium account to form a guild?
-	'guild_image_size_kb' => 80, // maximum size of the guild logo image in KB (kilobytes)
-	'guild_description_chars_limit' => 1000, // limit of guild description
-	'guild_description_lines_limit' => 6, // limit of lines, if description has more lines it will be showed as long text, without 'enters'
-	'guild_motd_chars_limit' => 150, // limit of MOTD (message of the day) that is shown later in the game on the guild channel
+	'guild_image_size_kb' => 50, // maximum size of the guild logo image in KB (kilobytes)
+	'guild_description_chars_limit' => 500, // limit of guild description
+	'guild_description_lines_limit' => 5, // limit of lines, if description has more lines it will be showed as long text, without 'enters'
+	'guild_motd_chars_limit' => 100, // limit of MOTD (message of the day) that is shown later in the game on the guild channel
 
 	// online page
 	'online_record' => true, // display players record?
 	'online_vocations' => false, // display vocation statistics?
 	'online_vocations_images' => false, // display vocation images?
 	'online_skulls' => false, // display skull images
-	'online_outfit' => true,
+	'online_outfit' => false,
 	'online_afk' => false,
 
 	// support list page
@@ -195,30 +208,30 @@ $config = array(
 	'team_display_outfit' => true,
 
 	// bans page
-	'bans_limit' => 50,
-	'bans_display_all' => true, // should all bans be displayed? (sorted page by page)
+	'bans_limit' => 10,
+	'bans_display_all' => false, // should all bans be displayed? (sorted page by page)
 
 	// highscores page
 	'highscores_vocation_box' => true, // show 'Choose a vocation' box on the highscores (allowing peoples to sort highscores by vocation)?
 	'highscores_vocation' => true, // show player vocation under his nickname?
 	'highscores_frags' => false, // show 'Frags' tab (best fraggers on the server)? Only 0.3
 	'highscores_balance' => false, // show 'Balance' tab (richest players on the server)
-	'highscores_outfit' => true, // show player outfit?
+	'highscores_outfit' => false, // show player outfit?
 	'highscores_country_box' => false, // doesnt work yet! (not implemented)
 	'highscores_groups_hidden' => 3, // this group id and higher won't be shown on the highscores
 	'highscores_ids_hidden' => array(0), // this ids of players will be hidden on the highscores (should be ids of samples)
-	'highscores_length' => 100, // how many records per page on highscores
+	'highscores_length' => 50, // how many records per page on highscores
 
 	// characters page
 	'characters' => array( // what things to display on character view page (true/false in each option)
 		'level' => true,
 		'experience' => false,
-		'magic_level' => false,
+		'magic_level' => true,
 		'balance' => false,
-		'marriage_info' => true, // only 0.3
+		'marriage_info' => false, // only 0.3
 		'outfit' => true,
 		'creation_date' => true,
-		'quests' => true,
+		'quests' => false,
 		'skills' => true,
 		'equipment' => true,
 		'frags' => false,
@@ -228,7 +241,7 @@ $config = array(
 		//'Some Quest' => 123,
 		//'Some Quest Two' => 456,
 	), // quests list (displayed in character view), name => storage
-	'signature_enabled' => true,
+	'signature_enabled' => false,
 	'signature_type' => 'tibian', // signature engine to use: tibian, mango, gesior
 	'signature_cache_time' => 5, // how long to store cached file (in minutes), default 5 minutes
 	'signature_browser_cache' => 60, // how long to cache by browser (in minutes), default 1 hour
@@ -240,7 +253,7 @@ $config = array(
 	'news_author' => true, // show author of the news
 
 	// gifts/shop system
-	'gifts_system' => false,
+	'gifts_system' => true,
 
 	// support/system
 	'bug_report' => true, // this configurable has no effect, its always enabled
@@ -255,7 +268,7 @@ $config = array(
 	//'forum_table_prefix' => 'z_', // what forum mysql table to use, z_ (for gesior old forum) or myaac_ (for myaac)
 
 	// last kills
-	'last_kills_limit' => 50, // max. number of deaths shown on the last kills page
+	'last_kills_limit' => 25, // max. number of deaths shown on the last kills page
 
 	// status, took automatically from config file if empty
 	'status_ip' => '',
