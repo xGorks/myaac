@@ -62,7 +62,7 @@ $config = array(
 
 	'visitors_counter' => false,
 	'visitors_counter_ttl' => 10, // how long visitor will be marked as online (in minutes)
-	'views_counter' => true,
+	'views_counter' => false,
 
 	// cache system. by default file cache is used
 	'cache_engine' => 'auto', // apc, apcu, eaccelerator, xcache, file, auto, or blank to disable.
@@ -284,13 +284,13 @@ $config = array(
 	'admin_panel_modules' => 'lastlogin,points,coins',
 
 	// other
-	'anonymous_usage_statistics' => true,
+	'anonymous_usage_statistics' => false,
 	'email_lai_sec_interval' => 60, // time in seconds between e-mails to one account from lost account interface, block spam
 	'google_analytics_id' => '', // e.g.: UA-XXXXXXX-X
 	'experiencetable_columns' => 3, // how many columns to display in experience table page. * experiencetable_rows, 5 = 500 (will show up to 500 level)
 	'experiencetable_rows' => 200, // till how many levels in one column
 	'date_timezone' => 'Europe/Berlin', // more info at http://php.net/manual/en/timezones.php
-	'footer_show_load_time' => true, // display load time of the page in the footer
+	'footer_show_load_time' => false, // display load time of the page in the footer
 
 	'npc' => array()
 );

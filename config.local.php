@@ -8,7 +8,7 @@ $config['mail_admin'] = 'koliseu-beta@protonmail.com';
 $config['mail_address'] = 'koliseu-beta@protonmail.com';
 $config['date_timezone'] = 'America/Sao_Paulo';
 $config['client'] = '860';
-$config['anonymous_usage_statistics'] = true;
+$config['anonymous_usage_statistics'] = false;
 $config['session_prefix'] = 'myaac_qyvc44ua_';
 $config['cache_prefix'] = 'myaac_t5li8vil_';
 
