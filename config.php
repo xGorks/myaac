@@ -126,8 +126,8 @@ $config = array(
 
 	// reCAPTCHA (prevent spam bots)
 	'recaptcha_enabled' => true, // enable recaptcha verification code
-	'recaptcha_site_key' => '6LeVtPEfAAAAAAQlVV_Ts1NXJwGv1VfDYH4WnTaM', // get your own site and secret keys at https://www.google.com/recaptcha
-	'recaptcha_secret_key' => '6LeVtPEfAAAAAKfApMY0VmvlYurJiwY79HCmAgaJ',
+	'recaptcha_site_key' => '6Lcp8_8fAAAAAPAyGreEwDf8kKvlX-deO2S_QfFM', // get your own site and secret keys at https://www.google.com/recaptcha
+	'recaptcha_secret_key' => '6Lcp8_8fAAAAAJak3uxmwr9qUZh2JaZMStc6QmM_',
 	'recaptcha_theme' => 'light', // light, dark
 
 	//
